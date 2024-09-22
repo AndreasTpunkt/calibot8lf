@@ -1,7 +1,13 @@
+function Warnbliner () {
+    calliBot2E.rgbLed(C2eRgbLed.All, 16, 16, 0)
+    basic.pause(1000)
+    calliBot2E.rgbLed(C2eRgbLed.All, 0, 0, 0)
+    basic.pause(1000)
+}
 let V_langsam = 10
 let V_normal = 30
 basic.forever(function () {
-    if (calliBot2E.distance(C2eEinheit.cm) > 3) {
+    if (calliBot2E.distance(C2eEinheit.cm) > 5) {
         calliBot2E.rgbLed(C2eRgbLed.LV, 16, 16, 16)
         calliBot2E.rgbLed(C2eRgbLed.RV, 16, 16, 16)
         calliBot2E.rgbLed(C2eRgbLed.LH, 16, 0, 0)
@@ -21,10 +27,6 @@ basic.forever(function () {
         }
     } else {
         calliBot2E.motorStop(C2eMotor.beide, C2eStop.Bremsen)
-        calliBot2E.rgbLed(C2eRgbLed.LV, 0, 0, 16)
-        calliBot2E.rgbLed(C2eRgbLed.RV, 0, 0, 16)
-        calliBot2E.rgbLed(C2eRgbLed.LH, 0, 16, 16)
-        calliBot2E.rgbLed(C2eRgbLed.RH, 0, 16, 16)
-        calliBot2E.led(C2eMotor.beide, C2eState.aus)
+        Warnbliner()
     }
 })
