@@ -1,5 +1,5 @@
 function Warnbliner () {
-    calliBot2E.rgbLed(C2eRgbLed.All, 16, 16, 0)
+    calliBot2E.rgbLed(C2eRgbLed.All, 16, 12, 2)
     basic.pause(1000)
     calliBot2E.rgbLed(C2eRgbLed.All, 0, 0, 0)
     basic.pause(1000)
